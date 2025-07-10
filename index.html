@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz Cumpleaños, Corrospum 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="audioOpen" src="assets/Sonido Carta Abrir.mp3"></audio>
+  <audio id="audioClose" src="assets/Sonido Carta Cerrar.mp3"></audio>
+
+  <div class="floating-hearts"></div>
+
+  <div class="envelope" onclick="abrirCarta()">
+    <div class="flap"></div>
+    <div class="letter">
+      <h1>Para mi Chimichurri 💌</h1>
+      <p id="mensaje">
+        Feliz cumpleaños, mi amor. Sé que hay veces en las que este día no lo ves tan especial, pero quiero que entiendas que sí lo es, porque fue el día en el que nació una persona hermosa (físicamente y mentalmente), de las pocas que hay. De verdad que no hay personas como tú, con ese carisma tan lindo a pesar de que tu día se vaya abajo, con esa sonrisa que deslumbra felicidad cada que la veo, con esa valentía y coraje para hacer y decir las cosas, con ese carácter que me encanta (hasta cuando me enojas jaja) y muchas otras cosas más que ya están puestas en la carta jaja. Te amo mucho mi corrospum, por el momento quise hacerte este aplicativo porque sabes como está mi estado económico, pero más adelante te daré un super regalo cuando tenga el dinero. Sé que no es mucho, pero de verdad quiero que sepas que siento demasiado por ti, te amo como no tienes idea. Sé que tengo mis errores, pero somos humanos y como humanos aprendemos y nos arrepentimos de las cosas malas que hacemos, sobre todo si el daño lo recibe la persona a la que amamos. Nunca te haré sentir así nuevamente mi amor.
+        Espero que de verdad te guste y, como dije, sé que no es mucho, pero no se compara a lo que siento por ti mi vidita. TE AMO MUCHO PRECIOSITA DE MI CORAZOOOOOOOOON ❤️💕
+      </p>
+      <button class="cerrar-carta" onclick="cerrarCarta(event)">Cerrar 💌</button>
+    </div>
+  </div>
+
+  <div class="acciones">
+    <button onclick="mostrarGaleria()">📸 Nuestras Fotitos</button>
+    <button onclick="mostrarTrivia()">🎮 Algunas Preguntitas</button>
+    <button onclick="mostrarMusica()">🎵 Musiquita amor</button>
+  </div>
+
+  <!-- Galería -->
+  <div id="galeria" class="seccion oculto">
+    <h2>🌟 Gracias por tomar las fotitos mi amorcito</h2>
+    <div class="carousel">
+        <button class="prev" onclick="moverCarrusel(-1)">‹</button>
+        <div class="carousel-track">
+        <img src="assets/imagen1.jpg">
+        <img src="assets/imagen2.jpg">
+        <img src="assets/imagen3.jpg">
+        <img src="assets/imagen4.jpg">
+        <img src="assets/imagen5.jpg">
+        <img src="assets/imagen6.jpg">
+        <img src="assets/imagen7.jpg">
+        <img src="assets/imagen8.jpg">
+        <img src="assets/imagen9.jpg">
+        <img src="assets/imagen10.jpg">
+        <img src="assets/imagen11.jpg">
+        <img src="assets/imagen12.jpg">
+        <img src="assets/imagen13.jpg">
+        <img src="assets/imagen14.jpg">
+        <img src="assets/imagen15.jpg">
+        <img src="assets/imagen16.jpg">
+        <img src="assets/imagen17.jpg">
+        <img src="assets/imagen18.jpg">
+        <img src="assets/imagen19.jpg">
+        <img src="assets/imagen20.jpg">
+        <img src="assets/imagen21.jpg">
+        <img src="assets/imagen22.jpg">
+        </div>
+        <button class="next" onclick="moverCarrusel(1)">›</button>
+    </div>
+  </div>
+
+
+  <!-- Música -->
+  <div id="musica" class="seccion oculto">
+    <h2>🎶 Elige una canción preciosita </h2>
+    <select id="selectorMusica" onchange="reproducirMusica()">
+        <option selected>No tengo ganas, no he comido aún</option>
+        <option value="waiting">Waiting for a Girl Like You - Foreigner</option>
+        <option value="love">I Want to Know What Love Is - Foreigner</option>
+        <option value="vienna">Vienna - Billy Joel</option>
+        <option value="iris">Iris - Goo Goo Dolls</option>
+        <option value="creep">Creep - Radiohead</option>
+        <option value="melancholy">On Melancholy Hill - Gorillaz</option>
+        <option value="apocalypse">Apocalypse - Cigarrettes After Sex</option>
+        <option value="yellow">Yellow - Coldplay</option>
+        <option value="sweet">Sweet Dreams, TN - The Last Shadow Puppets</option>
+        <option value="magia">La Magia - Little Jesus</option>
+        <option value="joke">I Started A Joke - Bee Gees</option>
+        <option value="sabor">Sabor a Mí - Los Panchos</option>
+    </select>
+
+    <div id="fraseCancion" style="margin-top: 15px; color: #d6336c; font-style: italic;"></div>
+
+    <div id="reproductor" style="margin-top: 10px; display: none;">
+        <audio id="audioPlayer" controls></audio>
+    </div>
+  </div>
+
+
+  <!-- Trivia -->
+  <div id="trivia" class="seccion oculto">
+    <h2>💘 Responde bien y te ganas un besito</h2>
+    <div id="pregunta"></div>
+    <input type="text" id="respuesta" placeholder="Escribe tu respuesta mi melocotón">
+    <button onclick="verificar()">Responder</button>
+    <p id="resultado"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
